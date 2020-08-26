@@ -100,3 +100,9 @@ If you don't want to read the #TODO comments, just pass in your data like this
 trainer.start("data/sentence_doctor_dataset_300.csv")
 ```
 and voila!! Please feel free to correct any mistakes in the code and make a pull request.
+
+## 8. Attribution
+* [Hugging Face](https://huggingface.co/) transformer lib for making this possible
+* Abhishek Kumar Mishra's transformer [tutorial](https://github.com/abhimishra91/transformers-tutorials/blob/master/transformers_summarization_wandb.ipynb) on text summarisation. Our training code is just a modified version of their code. So many thanks.
+* We also read a lot of work from [Suraj Patil](https://github.com/patil-suraj)
+* No one has been forgotten, hopefully :)
