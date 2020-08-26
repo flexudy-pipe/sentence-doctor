@@ -1,2 +1,19 @@
 # sentence-doctor
-Many Natural Language Processing tasks rely on sentence boundary detection (SBD). Although amazing libraries like **spacy** provide state of the art SBD, they often depend on text extractors (e.g pdf text extractors or OCR). The quality of these extractors greatly influence the quality of SBD libraries and as a consequence, the performance of downstream models as well. To help address this problem, we fine-tuned a T5 model from the hugging face hub that attempts to reconstruct “broken sentences”
+Sentence doctor is a T5 model that attempts to correct the errors or mistakes found in sentences. Model works on English, German and French text.
+
+## Problem:
+Many NLP models depend on
+* Text Extraction Libraries
+* OCR
+* Speech to Text libraries
+* And last but not the least, **Sentence Boundary Detection**
+
+As a consequence errors caused by these phases in NLP pipeline can affect the quality of models in applications. Especially since models are often trained on **clean** input.
+
+## Solution:
+Here we provide a model that **attempts** to reconstruct sentences based on the its context (sourrounding text). The task is pretty straightforward:
+* `Given an "erroneous" sentence, and its context, reconstruct the "intended" sentence`.
+
+
+
+
