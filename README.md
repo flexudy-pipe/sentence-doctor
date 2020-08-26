@@ -25,6 +25,6 @@ Note how we always emphises on the word *attempt*. The current version of the mo
 Hence, we strongly encourage you to finetune the model on your dataset. We might release a version trained on more data.
 
 ## 5. Datasets
-We generated synthetic data from the tatoeba dataset: https://tatoeba.org/eng. Randomly applying different transformations on words and characters based on some probabilities. The datasets are available in the data folder (where sentence_doctor_dataset_300K is a larger dataset with 100K sentences for each language).
+We generated synthetic data from the tatoeba dataset: https://tatoeba.org/eng. Randomly applying different transformations on words and characters based on some probabilities. The datasets are available in the data folder (where **sentence_doctor_dataset_300K** is a larger dataset with 100K sentences for each language).
 
 
