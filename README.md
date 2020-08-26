@@ -49,7 +49,7 @@ input_text = "repair_sentence: " + sentences[1] + " context: {" + sentences[0] +
 ```
 
 **Explanation**:</br>
-* We are telling the model to repair the sentence with the prefix **repair_sentence: **
+* We are telling the model to repair the sentence with the prefix "repair_sentence: "
 * Then appending the sentence we want to repair **sentence[1]** which is "m a medical doct"
 * Next we give some context to the model. In the case, some text that occured before the sentence and some text appearing after the sentence in the original text.
  * To do that, we append the keyword **context :**
