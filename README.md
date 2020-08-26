@@ -35,7 +35,7 @@ We generated synthetic data from the tatoeba dataset: https://tatoeba.org/eng. R
 ```python
 text = "That is my job I am a medical doctor I save lives"
 ```
-* For some reason, you decided extract the sentences and for some obscure reason, you obtained these sentences:
+* You decided extract the sentences and for some obscure reason, you obtained these sentences:
 
 ```python
 sentences = ["That is my job I a", "m a medical doct", "I save lives"]
