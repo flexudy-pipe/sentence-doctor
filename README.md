@@ -85,3 +85,18 @@ sentence = tokenizer.decode(outputs[0], skip_special_tokens=True, clean_up_token
 
 assert sentence == "I am a medical doctor."
 ```
+
+## 7. Fine-tuning
+We also provide a script `train_any_t5_task.py` that might help you fine-tune any Text2Text Task with T5. We added #TODO comments all over to help you use train with ease. For example:
+
+```python
+# TODO Set your training epochs
+config.TRAIN_EPOCHS = 3
+``` 
+If you don't want to read the #TODO comments, just pass in your data like this
+
+```python
+# TODO Where is your data ? Enter the path
+trainer.start("data/sentence_doctor_dataset_300.csv")
+```
+and voila!! Please feel free to correct any mistakes in the code and make a pull request.
