@@ -1,0 +1,2 @@
+# sentence-doctor
+Many Natural Language Processing tasks rely on sentence boundary detection (SBD). Although amazing libraries like spacy provide state of the art SBD, they often depend on text extractors (e.g pdf text extractors or OCR). The quality of these extractors greatly influence the quality of SBD libraries and as a consequence, the performance of downstream models as well. To help address this problem, we fine-tuned a T5 model from the hugging face hub that attempts to reconstruct “broken sentences”
