@@ -16,7 +16,8 @@ Here we provide a model that **attempts** to reconstruct sentences based on the 
 * Attempt to repair sentence boundaries.
   * Example (in German): **Input: "und ich bin im**", 
     * Prefix_Context: "Hallo! Mein Name ist John", Postfix_Context: "Januar 1990 geboren."
-    * ** Output: "John und ich bin im Jahr 1990 geboren"**
+    * Output: "John und ich bin im Jahr 1990 geboren"
+* Possibly sentence level spelling correction -- Although this is not the intended use.
 
 
 
