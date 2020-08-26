@@ -18,6 +18,10 @@ Here we provide a model that **attempts** to reconstruct sentences based on the 
     * Prefix_Context: "Hallo! Mein Name ist John", Postfix_Context: "Januar 1990 geboren."
     * Output: "John und ich bin im Jahr 1990 geboren"
 * Possibly sentence level spelling correction -- Although this is not the intended use.
-
+ * Input: "I went to church **las yesteday**" => Output: "I went to church last Sunday".
+ 
+# 4. Disclaimer
+Note how we always emphises on the word *attempt*. The current version of the model was only trained on **150K** sentences from the tatoeba dataset: https://tatoeba.org/eng. (50K per language -- En, Fr, De).
+Hence, we strongly encourage you to finetune the model on your dataset. We might release a version trained on more data.
 
 
