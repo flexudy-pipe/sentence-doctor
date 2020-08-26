@@ -56,8 +56,9 @@ input_text = "repair_sentence: " + sentences[1] + " context: {" + sentences[0] +
  * Append **{sentence[0]}** "{That is my job I a}". (Note how it is sourrounded by curly braces).
  * Append **{sentence[2]}** "{I save lives}". 
 * At last we tell the model this is the end of the input with </s>.
-</br>
+<br/>
 The input is now ```repair_sentence: m a medical doct context: {That is my job I a}{or I save lives} </s>```.
+<br/>
 
 **The context is optional**, so the input could also be ```repair_sentence: m a medical doct context: {}{} </s>```
 
