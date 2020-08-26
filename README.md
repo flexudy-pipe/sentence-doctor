@@ -29,6 +29,40 @@ We generated synthetic data from the tatoeba dataset: https://tatoeba.org/eng. R
 
 ## 6. Usage
 
+### 6.1 Preprocessing
+* Let us assume we have the following text (Note that there are no punctuation marks in the text):
+
+```python
+text = "That is my job I am a medical doctor I save lives"
+```
+* For some reason, you decided extract the sentences and for some obscure reason, you obtained these sentences:
+
+```python
+sentences = ["That is my job I a", "m a medical doct", "I save lives"]
+```
+* You now wish to correct the sentence **"m a medical doct"**.
+
+Here is the single preprocessing step for the model:
+
+```python
+input_text = "repair_sentence: " + sentences[1] + " context: {" + sentences[0] + "}{" + sentences[2] + "} </s>"
+```
+
+**Explanation**:</br>
+* We are telling the model to repair the sentence with the prefix **repair_sentence: **
+* Then appending the sentence we want to repair **sentence[1]** which is "m a medical doct"
+* Next we give some context to the model. In the case, some text that occured before the sentence and some text appearing after the sentence in the original text.
+ * To do that, we append the keyword **context :**
+ * Append **{sentence[0]}** "{That is my job I a}". (Note how it is sourrounded by curly braces).
+ * Append **{sentence[2]}** "{I save lives}". 
+* At last we tell the model this is the end of the input with </s>.
+</br>
+The input then looks like this: `repair_sentence: m a medical doct context: {That is my job I a}{or I save lives} </s>`
+
+**The context is optional**, so the input could also be `repair_sentence: m a medical doct context: {}{} </s>`
+
+### 6.2 Inference
+
 ```python
 
 from transformers import AutoTokenizer, AutoModelWithLMHead
@@ -37,7 +71,7 @@ tokenizer = AutoTokenizer.from_pretrained("flexudy/t5-base-multi-sentence-doctor
 
 model = AutoModelWithLMHead.from_pretrained("flexudy/t5-base-multi-sentence-doctor")
 
-input_text = "repair_sentence: m a medical doct context: {That is my job. I a}{or. I save lives} </s>"
+input_text = "repair_sentence: m a medical doct context: {That is my job I a}{or I save lives} </s>"
 
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 
