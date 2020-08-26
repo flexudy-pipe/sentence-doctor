@@ -1,4 +1,4 @@
-![avatar](sentence-doctor.png)
+![avatar](sent-banner.png)
 
 # sentence-doctor
 Sentence doctor is a T5 model that attempts to correct the errors or mistakes found in sentences. Model works on English, German and French text.
