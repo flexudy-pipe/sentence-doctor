@@ -29,7 +29,8 @@ We generated synthetic data from the tatoeba dataset: https://tatoeba.org/eng. R
 
 ## 6. Usage
 
-```pyhton
+```python
+
 from transformers import AutoTokenizer, AutoModelWithLMHead
 
 tokenizer = AutoTokenizer.from_pretrained("flexudy/t5-base-multi-sentence-doctor")
