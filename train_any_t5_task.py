@@ -111,7 +111,8 @@ class Trainer:
                 ids = data['source_ids'].to(device, dtype=torch.long)
 
                 mask = data['source_mask'].to(device, dtype=torch.long)
-
+                
+                # TODO make sure you modify the max_length and/or the number of beams
                 generated_ids = model.generate(
                     input_ids=ids,
                     attention_mask=mask,
