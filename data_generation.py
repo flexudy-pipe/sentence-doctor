@@ -495,4 +495,4 @@ if __name__ == "__main__":
     # Save the generated file wherever you want
     data_set.to_csv("data/sentence_doctor_dataset_300.csv", encoding="utf-8", sep="\t", index=False)
     
-    # I assume you have a GPU cuz if not, ... better grab cups of coffees for the next hours or days. :D 
+    # I assume you have a /data folder and also that you have a GPU cuz if not, ... better grab cups of coffees for the next hours or days. :D 
