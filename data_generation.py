@@ -14,6 +14,8 @@ class DataHandler:
 
     __LANGUAGE_DETECTOR = Predict()
 
+    # TODO If this is taking too long for you, just use spacy vectors. But you need to modify some other places in the code too.
+    #      for example: spacy uses something like .vector while the sentence transformer uses .encode()
     __SENTENCE_MODEL = SentenceTransformer('distiluse-base-multilingual-cased')
 
     # These transform probabilities greatly influence your dataset. Transforms include
